@@ -1,0 +1,39 @@
+@import "tailwindcss";
+* {
+  /* margin:0; */
+  /* padding:0; */
+  box-sizing:border-box;
+}
+nav{
+  margin:0;
+}
+
+body{
+   font-family: Arial, sans-serif;
+}
+
+.app-background {
+  @apply min-h-screen bg-zinc-950;
+}
+.btn {
+  @apply w-fit border px-3 py-2 font-semibold text-white transition-all duration-300 hover:bg-white hover:text-black;
+}
+
+.btn-b{
+   @apply w-fit border px-3 py-2 font-semibold text-white transition-all duration-300 hover:bg-blue-900 hover:text-black;
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
