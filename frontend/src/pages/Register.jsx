@@ -3,6 +3,7 @@ import { Link,useNavigate } from "react-router-dom";
 import { register } from "../services/authService";
 import AuthLayout from "../components/AuthLayout";
 import {useAuth} from "../context/AuthContext";
+import { toast } from "sonner";
 function Register() {
     const navigate = useNavigate();
     const {user,loading} = useAuth();
@@ -23,7 +24,7 @@ function Register() {
             toast.success(data.message || 'Registration successful');
             navigate('/');
         }catch(error){
-            toast.error(error.response?.data?.message || 'Registration failed');
+            toast.error(error.response?.data?.message || 'Registration failed');t
         }
     }
 
