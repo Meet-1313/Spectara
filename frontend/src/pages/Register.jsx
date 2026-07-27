@@ -20,12 +20,10 @@ function Register() {
 
         try{
             const data = await register({username,email,password});
-            alert('Registration successful');
+            toast.success(data.message || 'Registration successful');
             navigate('/');
         }catch(error){
-            alert(
-                error.response?.data?.message || 'Registration failed'
-            );
+            toast.error(error.response?.data?.message || 'Registration failed');
         }
     }
 
